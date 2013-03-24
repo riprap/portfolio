@@ -1,0 +1,753 @@
+<!-- 
+	File name: index.html
+	Author name: Nolan Knill
+	Web site name: http://www.nolanknill.com/mobile
+	File Description: This file is the home page for my mobile site.
+	It contains a slider of my featured work and the navigation
+	bar for the whole site
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/my.css" />
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+  		<script src='js/swipe.js'></script>
+  	  	<script>
+  	  	// initiliaze the slider
+			$(document).delegate('#homepage', 'pageshow', function () {
+    			slider = new Swipe(document.getElementById('slider'));
+			});
+		</script>
+  		<script>
+        /*try catch exception block to check for JS errors*/
+            try {$(function() {});} 
+            catch (error){console.error("Your javascript has an error: " + error);}
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="homepage">
+            <!-- Header -->
+            <div id="header" data-theme="b" data-role="header" data-position="fixed">
+                <h3 id="header-name">
+                    Nolan Knill
+                </h3>
+             </div>
+             <!-- Top Nav bar (Home, About Me, Contact Me) -->
+            <div id="nav-bar-top" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homepage" data-transition="flow" data-theme="a" class="ui-btn-active ui-state-persist">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="flow" data-theme="a">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="flow" data-theme="a">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav bar below top nav bar (Projects, Services) -->
+            <div id="nav-bar-bottom" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#projects" data-transition="flow" data-theme="a" >
+                            Projects
+                            <!--images look stupid<img src="img/projects.jpg">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" data-transition="flow" data-theme="a">
+                        	Services
+                            <!--images look stupid<img src="/img/services.jpg">-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Main content wrapper -->
+            <div data-role="content">
+            	<!-- Featured work slider title -->
+            	<div id="featured-work-title">
+            		<h1>
+            			Featured Work
+            		</h1>
+            	</div>
+            	<!-- Slider direction buttons -->
+            	<a class ="slider-button" href='#' onclick='slider.prev();return false;'>
+					PREV
+				</a> 
+				<a class="slider-button" id="next" href='#' onclick='slider.next();return false;'>
+					NEXT
+				</a>
+				<!-- Slider wrapper -->
+				<div id='slider' class='swipe'>
+					<div>
+						<!-- First slider option -->
+						<div style='display:block'>
+							<div>
+					    		<a target="_blank" href="http://www.rollupstats.com">
+					    			<img src="img/rollupstats.png" alt="roll up stats">
+					    		</a>
+					    		<h2>Rollupstats.com</h2>
+					    	</div>
+					    </div>
+					    <!-- Second slider option -->
+					    <div style='display:none'>
+					    	<div>
+					    		<a target="_blank" href="http://www.github.com/riprap/planet-defence">
+					    			<img src="img/planetdefence.png" alt="planet defence">
+					    		</a>
+					    		<h2>Planet Defence</h2>
+					    	</div>
+					    </div>
+					    <!-- Third slider option -->
+					    <div style='display:none'>
+					    	<div>
+					    		<a target="_blank" href="http://www.github.com/riprap/COMP1011Assignment1">
+					    			<img src="img/portfolio.png" alt="portfolio">
+					    		</a>
+					    		<h2>Desktop Portfolio</h2>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- Copyright footer -->
+            <div id="copyright" data-theme="a" data-role="footer" data-position="fixed">
+                <h3 id="copyright-text">
+                    &copy;  2013 NolanKnill.com - <a href="http://www.nolanknill.com/?redirect">View Full Site</a>
+                </h3>
+            </div>
+        </div>
+
+        <!-- About Me-->
+        <div data-role="page" id="about">
+            <!-- Header-->
+            <div id="header" data-theme="b" data-role="header" data-position="fixed">
+                <!-- Back button -->
+                <a data-role="button" data-rel="back" class="ui-btn-left" data-theme="a">
+                    Back
+                </a>
+                <h3 id="header-name">
+                    Nolan Knill
+                </h3>
+             </div>
+            <!-- Top Navigation Bar (home, about, contact)-->
+            <div id="nav-bar-top" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homepage" data-transition="flow" data-theme="a">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="flow" data-theme="a"  class="ui-btn-active ui-state-persist">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="flow" data-theme="a">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Navigation bar 2 (projects, services)-->
+            <div id="nav-bar-bottom" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#projects" data-transition="flow" data-theme="a" >
+                            Projects
+                            <!--images look stupid<img src="img/projects.jpg">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" data-transition="flow" data-theme="a">
+                            Services
+                            <!--images look stupid<img src="img/services.jpg">-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Content wraper-->
+            <div data-role="content">
+                <!-- Center image of me :) -->
+                <div id="center-image">
+                    <img src="img/me.jpg" alt="photo of me">
+                </div>
+                <!-- About me list -->
+                <div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+                    <!-- Biography -->
+                    <div data-role="collapsible"  data-collapsed="false">
+                        <h3>
+                            Biography
+                        </h3>
+                        <p>
+                            My name is Nolan Knill. I am a 23 year old Computer Programmer Analyst student at Georgian College 
+                in my hometown of Barrie, Ontario. I play on both the basketball and golf teams at the college. When I'm not
+                developing software, you can find me doing anything competitive, but mainly playing sports and video games.
+                        </p>
+                    </div>
+                    <!-- Mission -->
+                    <div data-role="collapsible">
+                        <h3>
+                            Mission
+                        </h3>
+                        <p>
+                            I was born to develop software.
+                        </p>
+                        <p>
+                            I develop because I thoroughly enjoy doing what I do. While enjoying the work I do, I also crave to get better. 
+                            Being able to do something I love as a career is what keeps me happy throughout my day. 
+                            These attributes all add up to a better product and satisfaction for myself and my employers.
+                        </p>
+                    </div>
+                    <!-- Resume -->
+                    <div data-role="collapsible">
+                        <h3>
+                            Resume
+                        </h3>
+                        <h2>
+                            Skills
+                            </h2>
+                        <ul>
+                            <li>
+                                Web Development: PHP, Python, MySQL, Symfony, Ruby on Rails, jQuery, AJAX, JavaScript
+                            </li>
+                            <li>
+                                Game Development: Python, Java
+                            </li>
+                            <li>
+                                Mobile Devlopment: Android, iOS
+                            </li>
+                            <li>
+                                View code samples here: 
+                                <a href="http://www.github.com/riprap">
+                                    GitHub/riprap
+                                </a>
+                            </li>
+                        </ul>
+                        <h2>
+                            Experience
+                        </h2>
+                        <h3>
+                            Web Application Developer: Net Perception Inc. -- May 2011 to Present
+                        </h3>
+                        <ul>
+                            <li>
+                                Working in a small team to develop new applications, and maintaining current systems for the CityDirect.info network.
+                            </li>
+                            <li>
+                                Created a systematic implementation for call-center software
+                            </li>
+                            <li>
+                                Skills used: PHP, Symfony, Python, MySQL, AJAX, JavaScript, jQuery
+                            </li>
+                        </ul>
+                        <h3>
+                            Education       
+                        </h3>
+                        <ul>
+                            <li>
+                                3-year Ontario Advanced Diploma, estimated completion: August 2013
+                            </li>
+                            <li>
+                                Key Courses: Advanced Web Programming, Advanced Java, Relational Databases, Introduction to Graphics Programming, Computer Programming Fundamentals
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright footer  -->
+            <div id="copyright" data-theme="a" data-role="footer" data-position="fixed">
+                <h3 id="copyright-text">
+                    &copy;  2013 NolanKnill.com - <a href="http://www.nolanknill.com/?redirect">View Full Site</a>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Contact Me Page -->
+        <div data-role="page" id="contact">
+            <!-- Header -->
+            <div id="header" data-theme="b" data-role="header" data-position="fixed">
+                <a data-role="button" data-rel="back" class="ui-btn-left" data-theme="a">
+                    Back
+                </a>
+                <h3 id="header-name">
+                    Nolan Knill
+                </h3>
+             </div>
+            <!-- Nav Bar (home, contact, about) -->
+            <div id="nav-bar-top" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homepage" data-transition="flow" data-theme="a">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="flow" data-theme="a">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="flow" data-theme="a" class="ui-btn-active ui-state-persist">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav Bar 2 (projects, services) -->
+            <div id="nav-bar-bottom" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#projects" data-transition="flow" data-theme="a" >
+                            Projects
+                            <!--images look stupid<img src="img/projects.jpg">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" data-transition="flow" data-theme="a">
+                            Services
+                            <!--images look stupid<img src="img/services.jpg">-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Content -->
+            <div data-role="content">
+                <!--Contact Information-->
+                <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="a">
+                    <li data-role="divider" data-theme="b" data-collapsed="true">
+                        Contact Information
+                    </li>
+                    <!-- Email -->
+                    <li>
+                        <a href="mailto:support@nolanknill.com">
+                            E-mail:
+                            support@nolanknill.com
+                        </a>
+                    </li>
+                    <!-- Phone number -->
+                    <li>
+                        <a href="tel:17058174653" title="phone-number">
+                            Phone:
+                            +1 (705) 817-4653
+                        </a>
+                    </li>               
+                    <!-- Work Address -->
+                    <li>
+                        <h1>Work Address</h1>
+                        <p>267 Bradford St. Barrie, ON, Canada</p>
+                    </li>
+                </ul>
+                
+                <!--Keep Connected list-->
+                <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="a">
+                    <li data-role="divider" data-theme="b" data-collapsed="true">
+                        Keep Connected
+                    </li>
+                    <!-- Twitter -->
+                    <li>
+                        <a target="_blank" href="http://www.twitter.com/NolanKnillCom">
+                            <img src="img/twitter.png" alt="twitter" class="contact-image-small">
+                            <h1>
+                                @NolanKnillCom
+                            </h1>
+                            <p>
+                                Follow me on Twitter
+                            </p>
+                        </a>
+                    </li>
+                    <!-- Facebook -->
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/pages/NolanKnillcom/240905172596841">
+                            <img src="img/facebook.png" alt="facebook" class="contact-image-small">
+                            <h1>
+                                NolanKnill.com
+                            </h1>
+                            <p>
+                                Like me on Facebook
+                            </p>
+                        </a>
+                    </li>
+                    <!-- Youtube -->
+                    <li>
+                        <a target="_blank" href="http://www.youtube.com/NolanKnill">
+                            <img src="img/youtube.png" alt="youtube"  class="contact-image-small" >
+                            <h1>
+                                Nolan Knill
+                            </h1>
+                            <p>
+                                Subscribe to me on Youtube
+                            </p>
+                        </a>
+                    </li>
+                    <!-- Elance-->
+                    <li>
+                        <a target="_blank" href="https://www.elance.com/s/nolanknill/10183/">
+                            <img src="img/elance.jpg"  alt="Elance" id ="elance-image" >
+                            <h1>
+                                Elance - Nolan K.
+                            </h1>
+                            <p>
+                                Hire me on Elance
+                            </p>
+                        </a>
+                    </li>
+                    <!-- Freelnancer -->
+                    <li>
+                        <a target="_blank" href="http://www.freelancer.ca/u/nolanknill.html?ttref=HireMe_Search">
+                            <img src="img/freelancer.jpg" alt="freelancer" id="freelancer-image">
+                            <h1>
+                                Freelancer - nolanknill
+                            </h1>
+                            <p>
+                                Hire me on Freelancer
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Copyright Footer -->
+            <div id="copyright" data-theme="a" data-role="footer" data-position="fixed">
+                <h3 id="copyright-text">
+                    &copy;  2013 NolanKnill.com - <a href="http://www.nolanknill.com/?redirect">View Full Site</a>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div data-role="page" id="projects">
+            <!-- Header -->
+            <div id="header" data-theme="b" data-role="header" data-position="fixed">
+                <a data-role="button" data-rel="back" class="ui-btn-left" data-theme="a">
+                    Back
+                </a>
+                <h3 id="header-name">
+                    Nolan Knill
+                </h3>
+             </div>
+            <!-- Nav Bar (home, about, contact )-->
+            <div id="nav-bar-top" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homepage" data-transition="flow" data-theme="a">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="flow" data-theme="a">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="flow" data-theme="a">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav Bar 2 (projects, services)-->
+            <div id="nav-bar-bottom" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#projects" data-transition="flow" data-theme="a"  class="ui-btn-active ui-state-persist">
+                            Projects
+                            <!--images look stupid<img src="img/projects.jpg">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" data-transition="flow" data-theme="a">
+                            Services
+                            <!--images look stupid<img src="img/services.jpg">-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Content Wrapper -->
+            <div data-role="content">
+                <!-- Collapsible list with my projects -->
+                <div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+                     <!-- Project 1 (Rollupstats) section -->
+                    <div class ="project-collapsible" data-role="collapsible" data-collapsed="false" data-expanded-icon="star" data-collapsed-icon="star">
+                        <p>
+                            Rollupstats.com is a project made using PHP, HTML, and CSS. The main
+                            function of the site is to record a person's statistics when playing Tim Horton's
+                            Roll Up the Rim to Win. It features Facebook Login to use the site, so a knowledge
+                            of OAuth was required.
+                        </p>
+                        <p>
+                            Click the image below to go to
+                            <a target="_blank" href="http://www.rollupstats.com">
+                                www.rollupstats.com
+                            </a>
+                        </p>
+                        <h3>RollUpStats.com</h3>
+                        <a target="_blank" href="http://www.rollupstats.com">
+                            <img src="img/rollupstats.png" alt="Roll Up Stats">
+                        </a>
+                    </div>
+                    <!-- Project 2 (Planet Defence) section -->
+                    <div class="project-collapsible" data-role="collapsible" data-expanded-icon="star" data-collapsed-icon="star">
+                        <h2>
+                            Planet Defence: Python Video Game
+                        </h2>
+                        <p>
+                            Planet Defence is a video game made in Python 3.2.3 
+                            and pygame. The object of the game is to use a spaceship 
+                            with a laser to defend a home   planet from self-destructing 
+                            aliens when they collide with the planet.
+                        </p>
+                        <p>
+                            Click the image below to view GitHub repo:
+                        </p>
+                        <a target="_blank" href="http://github.com/riprap/planet-defence">
+                            <img src="img/planetdefence.png" alt="Planet Defence">
+                        </a>
+                    </div>
+                    <!-- Project 3 (Desktop portfolio) section -->
+                    <div class="project-collapsible" data-role="collapsible" data-expanded-icon="star" data-collapsed-icon="star">
+                        <h2>
+                            My Desktop Portfolio
+                        </h2>
+                        <p>
+                            My portfolio was made in HTML5, CSS3 and jQuery.
+                        </p>
+                        <p>
+                            Click the image below to go to my portfolio.
+                        </p>
+                        <a target="_blank" href="http://www.rollupstats.com/portfolio">
+                            <img src="img/portfolio.png" alt="portfolio">
+                        </a>
+                    </div>
+                    <!-- Project 4 (Project Euler) section -->
+                    <div class="project-collapsible" data-role="collapsible" data-expanded-icon="star" data-collapsed-icon="star">
+                        <h2>
+                            Project Euler
+                        </h2>
+                        <p>
+                            <a target="_blank" href="http://www.projecteuler.net">
+                                Project Euler
+                            </a>
+                            is defined on their website as a series of challenging 
+                            mathematical/computer programming problems that will require 
+                            more than just mathematical insights to solve. Although 
+                            mathematics will help you arrive at elegant and efficient methods, 
+                            the use of a computer and programming skills will be required to 
+                            solve most problems.
+                        </p>
+                        <p>
+                            I have completed over thirty of these problems in python, and the code for
+                            these problems can be seen at: 
+                            <a target="_blank" href="http://www.github.com/project-euler">
+                                www.GitHub.com/riprap/project-euler
+                            </a>
+                        </p>
+                        <p>
+                            I plan on using the site to learn new languages by rewritting the
+                            python code that I already have into the language I want to learn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright Footer -->
+            <div id="copyright" data-theme="a" data-role="footer" data-position="fixed">
+                <h3 id="copyright-text">
+                    &copy;  2013 NolanKnill.com - <a href="http://www.nolanknill.com/?redirect">View Full Site</a>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div data-role="page" id="services">
+            <!-- Header -->
+            <div id="header" data-theme="b" data-role="header" data-position:"fixed">
+                <a data-role="button" data-rel="back" class="ui-btn-left" data-theme="a">
+                    Back
+                </a>
+                <h3 id="header-name">
+                    Nolan Knill
+                </h3>
+             </div>
+            <!-- Nav Bar Top (about, home, contact) -->
+            <div id="nav-bar-top" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homepage" data-transition="flow" data-theme="a">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="flow" data-theme="a">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="flow" data-theme="a">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav bar bottom (projects,services)-->
+            <div id="nav-bar-bottom" data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#projects" data-transition="flow" data-theme="a" >
+                            Projects
+                            <!--images look stupid<img src="img/projects.jpg">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" data-transition="flow" data-theme="a" class="ui-btn-active ui-state-persist">
+                            Services
+                            <!--images look stupid<img src="img/services.jpg">-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Content wrapper-->
+            <div data-role="content">
+                <!-- View my code call to action -->
+                <span>
+                    View my code examples at: 
+                    <a href="http://www.github.com/riprap">
+                        <img src="img/github.png" alt= "github" id="github-icon">
+                        /riprap
+                    </a>
+                </span>
+                <!-- Services collapsible list -->
+                <div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+                    <!-- Service 1 Section (Backend Web) -->
+                    <div data-role="collapsible" data-collapsed="false" data-expanded-icon="star" data-collapsed-icon="star">
+                        <h3>
+                            Backend Web Development
+                        </h3>
+                        <p>Professional Experience with:</p>
+                        <ul>
+                            <li>PHP</li>
+                            <li>Python</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <p>Working knowledge of:</p>
+                        <ul>
+                            <li>Java Enterprise Edition</li>
+                            <li>Ruby on Rails</li>
+                            <li>Django</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                    <!-- Service 2 Section (Frontend Web) -->
+                    <div data-role="collapsible">
+                        <h3>
+                           Frontend Web Development
+                        </h3>
+                        <p>Professional Experience with:</p>
+                        <ul>
+                            <li>jQuery</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <p>Working knowledge of:</p>
+                        <ul>
+                            <li>jQuery Mobile</li>
+                        </ul>
+                    </div>
+                    <!-- Service 3 Section (Web Frameworks) -->
+                    <div data-role="collapsible">
+                        <h3>
+                            Web Development Frameworks
+                        </h3>
+                       <p>Professional Experience with:</p>
+                        <ul>
+                            <li>PHP/Symfony 1.4 and 2.0 framework</li>
+                        </ul>
+                        <p>Working knowledge of:</p>
+                        <ul>
+                            <li>Python/Django</li>
+                            <li>Ruby on Rails</li>
+                        </ul>
+                        </ul>
+                    </div>
+                    <!-- Service 4 Section (Mobile Development) -->
+                    <div data-role="collapsible">
+                        <h3>
+                            Mobile Development
+                        </h3>
+                        <ul>
+                            <li>
+                                Android / Java
+                            </li>
+                            <li>
+                                iOS / objective-C
+                            </li>
+                            <li>
+                                jQuery Mobile
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Service 5 Section (Game Development)) -->
+                    <div data-role="collapsible">
+                        <h3>
+                            Game Development
+                        </h3>
+                        <p>More of a hobby than anything else, if you need some help during development,
+                            I would be more than willing to contribute on open-source projects. I have done games
+                            in the following languages:</p>
+                        <ul>
+                            <li>
+                                Python
+                            </li>
+                            <li>
+                                Java
+                            </li>
+                        </ul>
+                        <p>It is a personal goal of mine to expand this list over the next few years, with the following, ordered
+                            by priority</p>
+                            <ol>
+                                <li>
+                                    C++
+                                </li>
+                                <li>
+                                    OpenGL/DirectX and other game APIs
+                                </li>
+                                <li>
+                                    C#
+                                </li>
+                            </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Footer -->
+            <div id="copyright" data-theme="a" data-role="footer" data-position="fixed">
+                <h3 id="copyright-text">
+                    &copy;  2013 NolanKnill.com - <a href="http://www.nolanknill.com/?redirect">View Full Site</a>
+                </h3>
+            </div>
+        </div>
+
+	</body>
+</html>
