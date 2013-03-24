@@ -1,0 +1,158 @@
+/* 
+	File name: css/my.css
+	Author name: Nolan Knill
+	Web site name: http://www.nolanknill.com/mobile/
+	File Description: This file is the stylesheet for the whole site.
+*/
+/*
+ * header and footer web fonts
+ */
+#header, #copyright{
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+#center-image{
+	/*all this to center an image - found online*/
+	margin:0 auto;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	max-width:90%
+}
+
+/*
+ * This is the background gradient for all the mobile pages
+ */
+.ui-page{
+	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(179,179,179) 50%, rgb(252,255,255) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(179,179,179) 50%, rgb(252,255,255) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(179,179,179) 50%, rgb(252,255,255) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(179,179,179) 50%, rgb(252,255,255) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(179,179,179) 50%, rgb(252,255,255) 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(255,255,255)),
+		color-stop(0.5, rgb(179,179,179)),
+		color-stop(1, rgb(252,255,255))
+	);
+}
+
+/*
+ * Smaller icons on contact me page 
+ */
+.contact-image-small{
+	margin-top:15px;
+	margin-left:22px;
+}
+
+/*
+ * Elance icon on contact me page 
+ */
+#elance-image{
+	margin-top:10px;
+	margin-left:5px;
+}
+
+/*
+ * Freelancer icon on contact me page 
+ */
+#freelancer-image{
+	margin-top:25px;
+	margin-left:5px;
+}
+
+/*
+ * Wrapper for slider on home page 
+ */
+.swipe {
+  padding-bottom:20px;
+  position:relative;
+  z-index:1;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+/*
+ * Inside of slider on home page
+ */
+.swipe li div, .swipe div div div {
+  margin:0 10px;
+  color: #5e87b0;
+  font-weight:bold;
+  font-size:20px;
+  text-align:center;
+}
+
+/*
+ * Github icon on Projects page
+ */
+#github-icon{
+	height:30px;
+	width:30px;
+}
+
+/*
+ * Size of images of featured work slider
+ */
+.swipe img{
+	width:70%;
+	height:auto;
+	max-width:800px;
+	max-height:700px;
+}
+
+/*
+ * Centering the slider div on home page
+ */
+#slider{
+	padding-left:30px;
+}
+
+/*
+ * Name of projects in featured work slider on home page 
+ */
+.swipe h2{
+	font-size:15px;
+	text-shadow:none;
+	margin-top:5px;
+}
+
+/*
+ * Previous and next button for sliedr 
+ */
+#next{
+	float:right;
+}
+#prev{
+	float:left;	
+}
+
+/*
+ * Style the direction buttons for the slider on the home page
+ */
+.slider-button{
+	color:#5e87b0;
+	text-decoration:none;
+	margin-bottom:5px;
+}
+
+/*
+ * FEATURED WORK heading on home page
+ */
+#featured-work-title{
+	text-align:center;
+	margin-top:-25px;
+}
+
+/*
+ * Styling the projects images within the collapsible lists
+ */
+.project-collapsible img{
+	margin-left:15px;
+	width:90%;
+	height:auto;
+	max-width:800px;
+}
