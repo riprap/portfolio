@@ -1,0 +1,47 @@
+/*
+    File Name: css/slider.css
+    Author's Name: Nolan Knill
+    Web site name: Personal Porfolio
+    File Description: This CSS file contains all the CSS customized
+    for the Projects section of the homepage (index.html)
+*/
+
+.slides_container {
+    width:655px;
+    display:none;
+    border-style: solid;
+    border-width: 1px;
+    margin-top:5px;
+}
+
+.slides_container div {
+    margin-left:5px;
+    margin-bottom:5px;
+    width:600px;
+    height:400px;
+    display:block;
+}
+
+.slides_container div img{
+    width:635px;
+    height:330px;
+}
+
+.pagination {
+    display:none;
+}
+
+.next{
+    margin-left:590px;
+}
+
+#call_to_action{
+    font-size:1.5em;
+    background-color:#2F4F4F;
+    color:white;
+    text-decoration:none;
+}
+
+#call_to_action:hover{
+    color:#f16529;
+}

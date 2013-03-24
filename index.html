@@ -1,0 +1,115 @@
+<!--
+    File Name: index.html
+    Author's Name: Nolan Knill
+    Web site name: Personal Porfolio
+    File Description: This is the homepage for my personal portfolio.
+-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Nolan Knill</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script src="js/slides.min.jquery.js"></script>
+        <script>
+            $(function(){
+                $('#slides').slides({
+                    preload: true,
+                    generateNextPrev: true
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <img src="img/logo.png" alt="Nolan Knill">
+                <nav>
+                    <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="http://www.github.com/riprap">GitHub</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                <article>
+                    <header>
+                        <h1>Welcome</h1>
+                            <p>Hello. I am Nolan Knill and welcome to my personal portfolio. Within this site, you can find examples of most of the web development projects I have contributed to, as well as other software development projects I have been a part of.</p>
+                    </header>
+                    <section>
+                        <h2>Personal Tagline</h2>
+                        <p>Software development is my calling.</p>
+                    </section>
+                    <section>
+                        <h2>Mission Statement</h2>
+                        <p>I develop because I thoroughly enjoy doing what I do. While enjoying the work I do, I also crave to get better. Being able to do something I love as a career is what keeps me happy throughout my day. These attributes all add up to a better product and satisfaction for my customers.</p>
+                    </section>
+                    <section>
+                        <h2>Projects</h2>
+                        <a id="call_to_action" href="projects.html">View More Work</a>
+                        <div id="slides">
+                            <div class="slides_container">
+                                <div>
+                                    <h3>Planet Defence</h3>
+                                    <a href="http://www.github.com/riprap/project"><img src ="img/planetdefence.png" alt="Planet Defence"></a>
+                                </div>
+                                <div>
+                                    <h3>NolanKnill.com Wordpress Blog</h3>
+                                    <a href="http://www.nolanknill.com"><img src ="img/nkcom.png" alt="Nolan Knill Wordpress"></a>
+                                </div>
+                                <div>
+                                    <h3>Rails Blog Application</h3>
+                                    <a href="http://www.github.com/riprap/blog"><img src ="img/rails.png" alt="Ruby on Rails Blog"></a>
+                                </div>
+                            </div> <!-- #slides-container -->
+                        </div> <!-- #slides -->
+                    </section>
+                </article>
+
+                <aside>
+                    <h3>Keep Connected</h3>
+                    <a href="http://www.twitter.com/NolanKnillCom"><img src="img/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.facebook.com/pages/NolanKnillcom/240905172596841"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="http://www.youtube.com/NolanKnill"><img src="img/youtube.png" alt="Youtube"></a>
+                    <a href="http://www.linkedin.com/profile/view?id=168245004&trk=tab_pro"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://plus.google.com/105731887431577707579/"><img src="img/googleplus.png" alt="Google Plus"></a>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>&#169;2013 NolanKnill.com. Terms of Use and Privacy Policy are applicable to you. All rights reserved.</h3>
+            </footer>
+        </div>
+
+        </script>
+    </body>
+</html>
