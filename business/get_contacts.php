@@ -3,7 +3,7 @@ if (!isset($_SESSION['id'])){
 	header('Location:index.php');
 }
 function get_contacts($db){
-	$stmt = $db->query("SELECT name, number, address, note FROM contact");
+	$stmt = $db->query("SELECT name, number, address, note FROM contact ORDER BY name ASC");
 	$contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $contacts;
 }
