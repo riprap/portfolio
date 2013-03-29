@@ -1,4 +1,12 @@
 <?php
+/*
+    File Name: get_contacts.php
+    Name: Nolan Knill
+    Web site name: Business Contacts List
+    File Description: Displays the business contacts if logged in
+*/
+
+
 if (!isset($_SESSION['id'])){
 	header('Location:index.php');
 }

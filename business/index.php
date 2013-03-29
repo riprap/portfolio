@@ -1,8 +1,8 @@
 <!--
-    File Name: index.html
+    File Name: index.php
     Author's Name: Nolan Knill
-    Web site name: Personal Porfolio
-    File Description: This is the homepage for my personal portfolio.
+    Web site name: Business Contacts List
+    File Description: This is the business contacts homepage
 -->
 
 <!DOCTYPE html>

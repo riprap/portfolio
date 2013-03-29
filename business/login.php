@@ -1,4 +1,11 @@
 <?php
+/*
+    File Name: login.php
+    Name: Nolan Knill
+    Web site name: Business Contacts List
+    File Description: Login functionality, checks user/pass combo
+*/
+
 session_start();
 
 function secure_password($password){
